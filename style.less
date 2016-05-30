@@ -1,0 +1,423 @@
+@smooth-white: #fefefe;
+@light-grey: #eff0f1;
+@navy: #3c6a9f;
+@forest-green: #1bc28d;
+@dark-grey: #252124;
+@midtone-grey: #e4e4e6;
+@crimson: #c80038;
+@member-grey: #372d35;
+
+.smooth-transition {
+    -webkit-transition: all .1s ease-in;
+       -moz-transition: all .1s ease-in;
+         -o-transition: all .1s ease-in;
+            transition: all .1s ease-in;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: @light-grey;
+    font-family: Myriad Pro, Arial;
+    color: @dark-grey;
+    overflow-x: hidden;
+    
+    text-shadow: 0px 1px @smooth-white;
+}
+
+h1 { font-size: 1em; }
+h2 { font-size: 1.194em; }
+h3 { font-size: 1.618em; }
+h4 { font-size: 1.931em; }
+h5 { font-size: 2.618em; }
+h6 { font-size: 3.125em; }
+
+.input {
+    width: 420px;
+    height: 40px;
+    
+    border: 1px solid @midtone-grey;
+
+    padding: 10px;
+    background-color: @smooth-white;
+    
+    box-sizing: border-box;
+    
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.input:hover,
+.input:focus {
+    border: 1px solid @navy;
+    box-shadow: 0px 0px 2px lighten(@navy, 20%);
+}
+
+.input--big {
+    height: 200px;
+    resize: none;
+    
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.input--invalid {
+    border: 1px solid @crimson;
+    box-shadow: 0px 0px 2px lighten(@crimson, 20%);
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.menu {
+    width: 225px;
+    height: 100vh;
+    
+    float: left;
+    position: fixed;
+    
+    padding-top: 50px;
+    box-sizing: border-box;
+    
+    color: @smooth-white;    
+    background-color: @dark-grey;
+    
+    text-shadow: 0px 1px rgba(0, 0, 0, .4);
+}
+
+.menu__element {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.menu__element:hover {
+    cursor: pointer;
+    background-color: lighten(@dark-grey, 5%);
+}
+
+.content {
+    position: absolute;
+    margin-left: 260px;
+    margin-top: 50px;
+}
+
+.splash__element {
+    width: 300px;
+    height: 40px;
+
+    float: left;
+    background-color: @smooth-white;
+    
+    font-family: Myriad Pro, Arial;
+    line-height: 40px;
+    text-align: center;
+}
+
+.splash__element + .splash__element {
+    margin-left: 15px;
+}
+
+.splash__element:hover {
+    cursor: pointer;
+    color: @smooth-white;
+        
+    text-shadow: 0px 1px rgba(0, 0, 0, .4);
+}
+
+.splash__element--green:hover {
+    background-color: @forest-green; 
+}
+
+.splash__element--blue:hover {
+    background-color: @navy; 
+}
+
+.box-text {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    
+    text-transform: uppercase;
+}
+
+.box-text--thumb {
+    color: @member-grey;
+    text-transform: none;
+}
+
+.huge-button {
+    width: 420px;
+    height: 40px;
+        
+    display: block;
+    color: @smooth-white;
+    
+    border: 1px solid @light-grey;
+    margin-top: 20px;
+    
+    text-transform: uppercase;
+    text-shadow: 0px 1px rgba(0, 0, 0, .4);
+}
+
+.huge-button--green {
+    background-color: @forest-green; 
+}
+
+.huge-button--blue {
+    background-color: @navy;
+}
+
+.huge-button--green:hover {
+    background-color: lighten(@forest-green, 5%);
+}
+
+.huge-button--blue:hover {
+    background-color: lighten(@navy, 5%);
+}
+
+.thumb {
+    background-color: @smooth-white;
+    box-sizing: border-box;
+    
+    width: 300px;
+    height: 200px;
+    
+    padding: 20px; 
+    float: left;
+    
+    border: 1px solid @smooth-white;
+}
+
+.thumb + .thumb {
+    margin-left: 15px;
+}
+
+.thumb--group:hover {
+    border: 1px solid @forest-green;
+}
+
+.thumb--user:hover {
+    border: 1px solid @navy;
+}
+
+.thumb--add {
+    text-align: center;
+    line-height: 160px;
+}
+
+.thumb--add:hover {
+    cursor: pointer;
+    color: @smooth-white;
+    
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
+}
+
+.thumb--add--group:hover {
+    background-color: @forest-green;
+}
+
+.thumb--add--user:hover {
+    background-color: @navy;
+}
+    
+.thumb__button-container {
+    position: absolute;
+    bottom: 20px;
+}
+
+.medium-button {    
+    width: 125px;
+    height: 40px;
+    border: 1px solid @smooth-white;
+    text-transform: uppercase;
+    
+    text-shadow: 0px 1px @smooth-white;
+}
+
+.medium-button--thumb { 
+    float: left;
+}
+
+.medium-button + .medium-button {
+    margin-left: 8px;
+}
+
+.medium-button--green {
+    color: @smooth-white;
+    background-color: @forest-green;
+    
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
+}
+
+.medium-button--green:hover {
+    background-color: lighten(@forest-green, 5%);
+}
+
+.medium-button--blue {
+    color: @smooth-white;
+    
+    background-color: @navy;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
+}
+
+.medium-button--blue:hover {
+    background-color: lighten(@navy, 5%);
+}
+
+.medium-button--delete-user {
+    border: 1px solid @navy;
+    position: absolute;
+    right: 0;
+}
+
+.search-results__result {
+    width: 420px;
+    height: 40px;
+    line-height: 40px;
+    
+    border: 1px solid @smooth-white;
+    background-color: @smooth-white;
+
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.search-results__result + .search-results__result {
+    margin-top: 2px;
+}
+
+.search-results__result:hover {
+    cursor: pointer;
+}
+
+.details {
+    width: 420px;
+}
+
+.details__name {
+    text-align: center;
+    padding: 10px;
+    
+    box-sizing: border-box;
+    
+    margin-top: 15px;
+    background-color: @smooth-white;
+}
+
+.details__description { 
+    padding: 10px;
+    box-sizing: border-box;
+    color: @smooth-white;
+    
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
+    
+    background-color: @dark-grey;
+}
+
+.details__member-list {
+    color: @smooth-white;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    
+    background-color: @dark-grey;
+}
+
+.details__user {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    
+    box-sizing: border-box;
+    background-color: @member-grey;
+}
+
+.details__user-text {
+    position: absolute;
+    
+    width: 100%;
+    line-height: 40px;
+    padding-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        float: none;
+        position: absolute;
+        
+        width: 100%;
+        height: 40px;
+        
+        padding: 0;
+    }
+    
+    .menu__element {
+        float: left;
+        width: 50%;
+    }
+    
+    .content {
+        margin: 55px 0 0 0;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .splash__title {
+        text-align: center;
+    }
+    
+    .splash__element {
+        width: 100%;
+        height: 200px;
+        line-height: 200px;
+        padding: 0;
+        float: none;
+    }
+    
+    .splash__element + .splash__element {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .input {
+        transform: translateX(-1px);
+        width: 100%;
+    }
+    
+    .huge-button {
+        width: 100%;
+    }
+    
+    .thumb {
+        width: 100%;
+    }
+    
+    .thumb + .thumb {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .medium-button {
+        margin-top: 40px;
+        width: 100%;
+    }
+    
+    .medium-button--back {
+        margin-top: 0;
+    }
+    
+    .medium-button + .medium-button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .thumb__button-container {
+        position: static;
+    }
+    
+    .details {
+        width: 100%;
+    }
+}

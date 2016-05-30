@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device-width; initial-scale = 1.0; maximum-scale = 1.0; user-scalable = 0;">
+    
+    <title>NFQ užduotis</title>
+    
+    <link rel = "stylesheet" type = "text/css" href = "reset.css">
+    <link rel = "stylesheet" type = "text/css" href = "fonts.css">
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    
+    <script type = "text/javascript" src = "script.js"></script>  
+</head>
+    <body>    
+        <div class = "menu">            
+            <ul>
+                <li class = "menu__element smooth-transition" data-js-name = "group-list-button">Groups</li>
+                <li class = "menu__element smooth-transition" data-js-name = "user-list-button">Users</li>
+            </ul>
+        </div>
+        
+        <div class = "content" data-js-name = "content">
+        <div data-js-name = "splash-screen">
+            <span class = "splash__title"><h5>Hey! Choose an option to begin.</h5></span>
+                
+            <br>
+            <div class = "splash__element splash__element--green smooth-transition" data-js-name = "create-group"><h3>Create a group</h3></div>
+            <div class = "splash__element splash__element--blue smooth-transition" data-js-name = "create-user"><h3>Create a user</h3></div>
+        </div>
+        
+        <div class = "hidden" data-js-name = "create-container">
+            <div class = "hidden" data-js-name = "create-group-container">
+                <h3>Create a Group</h3>
+                
+                <form>
+                    <div class = "box-text">Group Name:</div>
+                    <input class = "input smooth-transition" type = "text" name = "group-name" placeholder = "Required!"/>
+                
+                    <div class = "box-text">Description:</div>
+                    <textarea class = "input input--big smooth-transition" type = "text" name = "group-desc"></textarea>
+                    <input class = "huge-button huge-button--green smooth-transition" type = "button" data-js-name = "submit-group" value = "Done" />
+                </form>
+            </div>
+            
+            <div class = "hidden" data-js-name = "create-user-container">
+                <form>
+                    <h3>Create a User</h3>
+                
+                    <div class = "box-text">First Name:</div>
+                    <input class = "input" type = "text" name = "user-name" placeholder = "Required!" />
+                
+                    <div class = "box-text">Last Name:</div>
+                    <input class = "input" type = "text" name = "user-surname" />
+                
+                    <input class = "huge-button huge-button--blue smooth-transition" type = "button" data-js-name = "submit-user" value = "Done" />
+                </form>
+            </div>
+        </div>
+            
+        <div class = "hidden" data-js-name = "group-list">
+            <div class = "thumb thumb--add thumb--add--group smooth-transition" data-js-name = "create-group"><h3>Add a group</h3></div>
+        </div>
+            
+        <div class = "hidden" data-js-name = "user-list">
+            <div class = "thumb thumb--add thumb--add--user smooth-transition" data-js-name = "create-user"><h3>Add a user</h3></div>
+        </div>
+        
+        <div class = "details hidden" data-js-name = "group-details">
+            <input type = "button" value = "Back" class = "medium-button medium-button--green medium-button--back smooth-transition" data-js-name = "group-details-back-button" />
+            
+            <div class = "details__name" data-js-name = "group-details-name">Group name</div>
+            <div class = "details__description" data-js-name = "group-details-desc">Group description</div>
+            <div class = "details__member-list" data-js-name = "group-details-member-list"></div>
+            
+            <input class = "input" data-js-name = "user-search" placeholder = "Start typing to add a user!" />
+            <ul data-js-name = "search-results"></ul>
+        </div>
+            
+        <div class = "details hidden" data-js-name = "user-details">
+            <input type = "button" value = "Back" class = "medium-button medium-button--blue medium-button--back smooth-transition" data-js-name = "user-details-back-button" />
+            
+            <div class = "details__name" data-js-name = "user-details-name"></div>
+            <div class = "details__description" data-js-name = "user-details-description"></div>
+        </div>
+        
+        </div>
+    </body>
+</html>
